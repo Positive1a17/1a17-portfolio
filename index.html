@@ -202,6 +202,9 @@ summary{cursor:pointer;font-family:var(--f-hud);font-size:13px;color:var(--neon)
 pre{margin:12px 0 0;overflow-x:auto;font:12.5px/1.55 var(--f-hud);color:var(--ink);white-space:pre}
 footer{border-top:1px solid var(--rule);padding-top:18px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center}
 
+.flag-more{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:14px}
+.flag-more figure{margin:0}.flag-more figcaption{font-family:var(--f-hud);font-size:12px;color:var(--dim,#9aa);margin-top:6px}
+.flag-more video{width:100%;display:block}
 @media (max-width:900px){
   .cover,.hf,.comic-grid{grid-template-columns:minmax(0,1fr)}
   .cover-art{max-width:420px}
@@ -217,6 +220,7 @@ footer{border-top:1px solid var(--rule);padding-top:18px;display:flex;flex-wrap:
   .pages,.strip{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (max-width:560px){
+  .flag-more{grid-template-columns:minmax(0,1fr)}
   .tools,.lessons,.wide2,.packs{grid-template-columns:minmax(0,1fr)}
   .wall{grid-template-columns:repeat(2,minmax(0,1fr))}
   .hw-row{grid-template-columns:minmax(0,1fr)}
@@ -261,6 +265,48 @@ footer{border-top:1px solid var(--rule);padding-top:18px;display:flex;flex-wrap:
   <div class="kpi" role="listitem"><b>1000 кр.</b><span>Higgsfield за 3 дня: короткометражка, экшн-сцена, мультфильм</span></div>
   <div class="kpi" role="listitem"><b>30+</b><span>готовых роликов 9:16 и 16:9 в семи сериях, плюс научный фильм 5:54</span></div>
 </div>
+
+<!-- ============ FLAGSHIP: LAST HOPE ============ -->
+<section id="last-hope">
+  <div class="sec-head">
+    <div class="hud" style="color:var(--amber)">Флагман · ИИ-фильм · 16:9 · 1:41 · RU и EN</div>
+    <h2>«Последняя надежда» — атомная подлодка 1A17 в зомби-апокалипсис</h2>
+    <p><span class="plate">Ядерный взрыв, потом «24 часа назад»: горящий порт, мёртвые на причале, срочное погружение, письмо, которое не хочется дочитывать, и последний пуск. Музыкальный фильм без диалогов.</span></p>
+  </div>
+  <div class="film">
+    <div>
+      <video controls preload="none" playsinline poster="assets/last-hope/poster-ru.jpg">
+        <source src="assets/last-hope/last-hope-ru-song-720p.mp4" type="video/mp4">
+      </video>
+      <div class="film-strip">
+        <figure><img src="assets/last-hope/still-21.jpg" alt="Лодка 1A17 на фоне горящего порта" loading="lazy"><span class="n">0:21 порт в огне</span></figure>
+        <figure><img src="assets/last-hope/still-41.jpg" alt="Письмо на пледе в каюте моряка" loading="lazy"><span class="n">0:41 письмо</span></figure>
+        <figure><img src="assets/last-hope/still-70.jpg" alt="Пуск ракеты с подлодки 1A17" loading="lazy"><span class="n">1:10 пуск</span></figure>
+        <figure><img src="assets/last-hope/still-88.jpg" alt="Подлодка и глаз бездны" loading="lazy"><span class="n">1:28 бездна</span></figure>
+      </div>
+    </div>
+    <div class="stack">
+      <div class="meta hud" style="color:var(--amber)">1920×1080 · 30 к/с · −16,5 LUFS · 40 планов</div>
+      <ul>
+        <li><b style="color:var(--cream)">Кадры и видео.</b> Ключевые кадры в GPT Image по одному стилю, лица и лодка «1A17» держатся от плана к плану. Видео оживлено локально в MiniMax H3, апскейл SeedVR2.</li>
+        <li><b style="color:var(--cream)">Монтаж кодом.</b> Remotion: 40 планов по сетке 80 BPM, плавные наезды, вспышка взрыва, титры печатаются под звук настоящей печатной машинки.</li>
+        <li><b style="color:var(--cream)">Песня под сюжет.</b> Suno Pro, женский вокал на мой текст. Строчки нарезаны под сцены: «Пуск!» на старт ракеты, «Небо в огне!» на взрыв, в сцене письма голос поёт сам текст письма.</li>
+        <li><b style="color:var(--cream)">Две языковые версии.</b> Русская и английская: своя песня и переведённое письмо в кадре. Есть версия без музыки, только звук сцен и удары.</li>
+      </ul>
+      <p class="dim" style="font-size:14px">В плеерах сжатые копии 720p, мастер 1080p, есть вертикальные версии 9:16.</p>
+    </div>
+  </div>
+  <div class="flag-more">
+    <figure>
+      <video controls preload="none" playsinline poster="assets/last-hope/poster-en.jpg"><source src="assets/last-hope/last-hope-en-song-720p.mp4" type="video/mp4"></video>
+      <figcaption>Last Hope · English version with song</figcaption>
+    </figure>
+    <figure>
+      <video controls preload="none" playsinline poster="assets/last-hope/poster-nomusic.jpg"><source src="assets/last-hope/last-hope-ru-nomusic-720p.mp4" type="video/mp4"></video>
+      <figcaption>Версия без музыки · звук сцен и удары</figcaption>
+    </figure>
+  </div>
+</section>
 
 <!-- ============ COMIC ============ -->
 <section id="comic">
